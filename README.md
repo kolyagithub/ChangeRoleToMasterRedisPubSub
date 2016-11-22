@@ -20,8 +20,29 @@ Application works with a wide Redis.
 
      - Not used the tools of the OS
 
-Usage:
-    - change Redis IP ADDRESS in config file
-    - 'node app show' (show incoming messages from master)
-    - 'node app getErrors' (show all errors in all apps)
-    - 'node app million' (handling 1000000 messages)
+It can connect with different clients on different a worker.
+For this functionality I use Redis Pub/Sub.
+
+# Requirements
+node
+npm
+
+# Dependencies
+redis
+underscore
+winston
+
+# Installation
+npm install
+
+# Configuration
+(config.json)
+Edit conf variable with redis port and host. You can use Redis server in the others PC.
+
+# Run it
+Install Redis and running
+
+node app.js [argument]
+    - 'show'              (show incoming messages from master)
+    - 'getErrors'         (show all errors in all apps)
+    - 'million'           (handling 1000000 messages)
